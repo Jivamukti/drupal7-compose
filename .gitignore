@@ -1,0 +1,14 @@
+cnf/config.yml
+cnf/settings.php
+www
+vendor
+.env
+
+# Ignore any Vagrant boxen
+.vagrant/
+
+.DS_Store
+.bundle
+.ruby-version
+.sass-cache
+nbproject
