@@ -1,0 +1,123 @@
+{
+    "minimum-stability": "alpha",
+    "name": "definitivedrupal/d7tangler",
+    "type": "project",
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+                "name":"drupal\/coder",
+                "description":"Coder is a library and a module to review Drupal code.",
+                "keywords":[
+                    "standards",
+                    "phpcs",
+                    "code review"
+                ],
+                "homepage":"https:\/\/drupal.org\/project\/coder",
+                "version":"7.2.4",
+                "version_normalized":"7.2.4.0",
+                "license":[
+                    "GPL-2.0+"
+                ],
+                "authors":[],
+                "source":{
+                    "type":"git",
+                    "url":"http:\/\/git.drupal.org\/project\/coder.git",
+                    "reference":"5d36c5d737114e0812653401d245dd69d586fc0a"
+                },
+                "dist":{
+                    "type":"zip",
+                    "url":"http:\/\/ftp.drupal.org\/files\/projects\/coder-7.x-2.4.zip",
+                    "reference":null,
+                    "shasum":null
+                },
+                "type":"drupal-module",
+                "time":"2015-01-14T23:19:28+00:00",
+                "extra":{
+                    "branch-alias":{
+                        "dev-7.x-2.x":"7.2.x-dev"
+                    }
+                },
+                "require":{
+                    "php":">=5.2.0",
+                    "squizlabs\/php_codesniffer":">=1.4.6,<2.0.0",
+                    "drupal\/drupal":"7.*"
+                },
+                "suggest":{
+                    "drupal\/gplib":"Required by drupal\/coder_upgrade"
+                },
+                "replace":{
+                    "drupal\/coder_review":"self.version",
+                    "drupal\/drupalcs":"self.version",
+                    "drupal\/bad":"self.version",
+                    "drupal\/bad2":"self.version",
+                    "drupal\/coder_upgrade":"self.version"
+                }
+            }
+        },
+        {
+          "type": "composer",
+          "url": "http://packagist.drupal-composer.org"
+        },
+
+        {
+            "type": "vcs",
+            "url": "https://github.com/definitivedrupal/tangler"
+        },
+        
+        {
+            "type": "package",
+            "package": {
+                "name": "simplehtmldom/simplehtmldom",
+                "version": "1.11.210-dev",
+                "source": {
+                    "url": "http://svn.code.sf.net/p/simplehtmldom/code",
+                    "type": "svn",
+                    "reference": "trunk@210"
+                },
+                "autoload": {
+                    "classmap": ["simple_html_dom.php"],
+                    "files": ["simple_html_dom.php"]
+                }
+            }
+        }
+    ],
+    "require": {
+        "composer/composer": "~1.0@alpha",
+        "drupal/drupal": "7.*",
+        "drupal/drupal-library-installer-plugin": "~0.1",
+        "drupal/admin_menu": "*",
+        "drupal/ctools": "*",
+        "drupal/date": "7.*",
+        "drupal/devel": "7.*",
+        "drupal/diff": "7.*",
+        "drupal/ds": "7.*",
+        "drupal/features": "7.2.*",
+        "drupal/feeds": "7.*",
+        "drupal/migrate": "7.*",
+        "drupal/panels": "7.*",
+        "drupal/pathauto": "7.*",
+        "drupal/picture": "7.*",
+        "drupal/responsive_menus": "7.*",
+        "drupal/rules": "7.*",
+        "drupal/strongarm": "7.*",
+        "drupal/semanticviews": "7.*",
+        "drupal/token": "*",
+        "drupal/views": "*",
+        "definitivedrupal/tangler": "*",
+        "winmillwill/settings_compile": "~2.1.1"
+    },
+    
+    "minimum-stability": "dev",
+    
+
+    "scripts": {
+        "post-install-cmd": [
+            "Definitivedrupal\\Tangler\\ScriptHandler::postUpdate",
+            "bin/wrapper"
+        ],
+        "post-update-cmd": [
+            "Definitivedrupal\\Tangler\\ScriptHandler::postUpdate"
+        ]
+    }
+}
