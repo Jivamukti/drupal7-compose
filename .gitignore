@@ -1,8 +1,15 @@
 cnf/config.yml
 cnf/settings.php
+composer.lock
+
+# Ignore www & vendor folders as well as hidden env folder
 www
 vendor
 .env
+
+# Ignore core and contrib modules (but not custom and feature_modules) 
+core
+modules/*
 
 # Ignore any Vagrant boxen
 .vagrant/
