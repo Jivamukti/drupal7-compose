@@ -84,10 +84,9 @@
     ],
     "require": {
         "composer/composer": "~1.0@alpha",
-        "drupal/drupal": "7.*",
         "drupal/drupal-library-installer-plugin": "~0.1",
-        "drupal/admin_menu": "*",
-        "drupal/ctools": "*",
+        "drupal/admin_menu": "7.*",
+        "drupal/ctools": "7.*",
         "drupal/date": "7.*",
         "drupal/devel": "7.*",
         "drupal/diff": "7.*",
