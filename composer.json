@@ -113,10 +113,12 @@
 
     "scripts": {
         "post-install-cmd": [
+            "bin/rmgit",
             "Definitivedrupal\\Tangler\\ScriptHandler::postUpdate",
             "bin/wrapper"
         ],
         "post-update-cmd": [
+            "bin/wrapper",
             "Definitivedrupal\\Tangler\\ScriptHandler::postUpdate"
         ]
     }
