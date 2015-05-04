@@ -3,8 +3,8 @@
 # path=$(dirname "$0")
 # source $path/common.sh
 
+time composer -vvv update
+cp cnf/travis.yml www/.travis.yml
 
-rm -rf core/.git
-time composer update
 #chmod -R +w $base/cnf
 #chmod -R +w $base/www/sites/default

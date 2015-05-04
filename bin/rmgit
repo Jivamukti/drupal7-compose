@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "Script executed from: ${PWD}"
-cd ../vendor/drupal/drupal
+cd vendor/drupal/drupal
 echo "Removing .git from from: ${PWD}"
-#rm -rf .git
+rm -rf .git

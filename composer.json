@@ -118,7 +118,7 @@
             "bin/wrapper"
         ],
         "post-update-cmd": [
-            "bin/wrapper",
+            "bin/rmgit",
             "Definitivedrupal\\Tangler\\ScriptHandler::postUpdate"
         ]
     }
